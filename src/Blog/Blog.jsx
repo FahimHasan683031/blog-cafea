@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { FaBeer} from 'react-icons/fa';
+import {FaBookmark} from 'react-icons/fa';
 
 
 const Blog = ({blog,bookmarkHandle,readTimeHandle}) => {
@@ -17,7 +17,7 @@ const Blog = ({blog,bookmarkHandle,readTimeHandle}) => {
                 </div>
                 <div className='flex items-center gap-4'>
                     <h3 className='text-lg text-gray-500'>{reading_time} min read</h3>
-                    <span className='w-6 text-gray-500 cursor-pointer'><FaBeer onClick={()=>bookmarkHandle(blog)}></FaBeer></span>
+                    <span className='w-6 text-gray-500 cursor-pointer'><FaBookmark onClick={()=>bookmarkHandle(blog)}></FaBookmark> </span>
                     
                 </div>
             </div>
@@ -27,7 +27,7 @@ const Blog = ({blog,bookmarkHandle,readTimeHandle}) => {
                 hashtags.map((tag,inId) =><span key={inId}><p>#{tag}</p></span>)
             }
             </div>
-            <h3 className='underline text-blue-600 font-medium mb-7 cursor-pointer' onClick={()=>readTimeHandle(blog)}>Mark as read</h3>
+            <h3 className='underline text-blue-600 font-medium mb-7 cursor-pointer' onClick={()=>readTimeHandle(blog)}>Mark as read </h3>
             
         </div>
     );
